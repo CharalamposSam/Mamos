@@ -1,0 +1,1288 @@
+$breakPoint: 600px;
+
+* {
+    box-sizing: border-box;
+}
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url( ../images/body/mamos-texture-beige.jpg );
+}
+
+@media only screen and (max-width: $breakPoint ) {
+    body {
+        background-size: 50% auto;
+    }
+    
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 30;
+    display: none;
+
+    img {
+        width: 100%;
+        max-width: 70px;
+        display: block;
+        margin-right: auto;
+    }
+
+    nav {
+        width: 800px;
+        height: 50px;
+        background-color: #2a809b;
+    }
+
+    button {
+        width: 150px;
+        height: 40px;
+        margin-left: auto;
+    }
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.copy-title {
+    font-size: 30px;
+    font-family: Burford;
+    text-align: center;
+    color: #2c2a25;
+    text-shadow: 0 2px 0 #b6a488;
+}
+
+.copy-subtitle {
+    font-size: 20px;
+    font-family: Burford;
+    text-align: center;
+    color: #2c2a25;
+    margin-bottom: 15px;
+}
+
+.copy-p {
+    margin: 0;
+    text-align: center;
+    color: #236b83;
+    font-family: NoirPro;
+    font-weight: 500;
+}
+
+/* SECTION 1 STARTS */
+.section1 {
+    position: relative;
+    overflow: hidden;
+    
+    .videoWindow {
+        width: 100vw;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        z-index: 28;
+        transition: top .5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url( '../images/Section1/bg1-video-player.jpg' );
+        background-repeat: no-repeat;
+        background-position: 50%;
+
+        .video {
+            
+        }
+
+        .closeBtn {
+            position: relative;
+            font-family: Burford;
+            color: #efd5ac;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                background-color: #efd5ac;
+                width: 25px;
+                height: 2px;
+                position: absolute;
+                top:7px;
+                left:-30px;
+                transform: rotate( -45deg );
+            }
+
+            &:after {
+                content: '';
+                background-color: #efd5ac;
+                width: 25px;
+                height: 2px;
+                position: absolute;
+                top:7px;
+                left:-30px;
+                transform: rotate( 45deg );
+            }
+            
+        }
+    }
+
+    @media only screen and (max-width: 1100 ) {
+        .videoWindow {
+            background-size: 100% auto;
+        }
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .city {
+            width: 100%;
+            min-width: 300px;
+            position: absolute;
+            top:50%;
+            left: 0;
+            animation: city 1s ease-in-out forwards;
+            z-index: 20;
+        }
+
+        .bottle {
+            width: 14%;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate( -50%, -40% );
+            animation: bottle 1.3s ease-in-out;
+            z-index: 21;
+            max-width: 190px;
+        }
+
+        .Ships-L {
+            width: 25%;
+            position: absolute;
+            top:55%;
+            left: 11%;
+            animation: ships-L 4s ease-in-out infinite;
+            z-index: 21;
+        }
+
+        .Ships-R {
+            width: 25%;
+            position: absolute;
+            top:58%;
+            right: 15%;
+            animation: ship-R 4s ease-in-out infinite;
+            z-index: 21;
+        }
+
+        .scrollArrow {
+            width: 15px;
+            position: absolute;
+            bottom: 2%;
+            left: 50%;
+            animation: scrollArrow 1.5s ease-in-out infinite;
+            z-index: 20;
+            transform: translateX( -50% );
+        }
+
+        .cloud1 {
+            width: 20%;
+            position: absolute;
+            top:41%;
+            left: 31%;
+            z-index: 22;
+        }
+        .cloud2 {
+            width: 20%;
+            position: absolute;
+            top:3%;
+            left: 71%;
+            z-index: 22;
+        }
+        .cloud3 {
+            width: 20%;
+            position: absolute;
+            top:33%;
+            left: 50%;
+            z-index: 22;
+        }
+        .cloud4 {
+            width: 20%;
+            position: absolute;
+            top:17%;
+            left: 29%;
+            z-index: 22;
+            
+        }
+        .logotypo {
+            width: 15%;
+            min-width: 150px;
+            position: absolute;
+            top:26%;
+            left: 10%;
+            animation: logo-type .7s ease-in-out .5s forwards;
+            transform: translateY( -30px );
+            opacity: 0;
+        }
+
+        .copy {
+            width: 23%;
+            position: absolute;
+            top:26%;
+            left: 72%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 25;
+            transform-origin: 50% 0;
+            
+            .copy-container {
+                opacity: 0;
+                animation: copy-container .7s ease-in-out 1.3s forwards;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                img {
+                    width: 107px;
+                    margin:  5px 0;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                background: #21637a;
+                border: 2px solid #b6a488;
+                box-shadow: 0 5px 5px 0 rgba(44, 42, 37, .2);
+                width: 160px;
+                height: 35px;
+                font-size: 14px;
+                font-family: Burford;
+                margin-top: 30px;
+                padding-top: 4px;
+                font-weight: 400;
+                opacity: 0;
+                animation: copy-button .7s ease-in-out 2s forwards;
+                background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
+                background-size: 100% auto;
+                
+
+                img {
+                    width: 13px;
+                    margin-left: 8px;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: $breakPoint) {
+    .section1 {
+        .container {
+            .city {
+                width: 180%;
+                animation: none;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+            .bottle {
+                animation: none;
+                transform: translate(-50%, -45%);
+                width: 18%;
+                top:45%;
+            }
+    
+            .Ships-L {
+                animation: none;
+                top: 50%;
+                left: -4%;
+                width: 35%;
+            }
+    
+            .Ships-R {
+                animation: none;
+                top: 50%;
+                right: -2%;
+                width: 35%;
+            }
+
+            .cloud1 {
+                top: 38%;
+                left: 26%;
+            }
+            .cloud2 {
+                top: 18%;
+                left: 84%;
+            }
+            .cloud3 {
+                width: 23%;
+                top: 31%;
+            }
+            .cloud4 {
+                top: 29%;
+            }
+    
+            .scrollArrow {
+                animation: none;
+                top: 96%;
+            }
+            .logotypo {
+                top: 5%;
+                left: 50%;
+                transform: translateX( -50% );
+                animation: none;
+                opacity: 1;
+            }
+            .copy {
+                top: 65%;
+                left: 50%;
+                transform: translate(-50%, 0) scale( .6 );
+                width: 90%;
+                
+                
+                .copy-container {
+                    animation: none;
+                    opacity: 1;
+                }
+
+                button {
+                    animation: none;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scrollArrow {
+    0% {
+        transform: translate( -50%, 0 )
+    }
+    50% {
+        transform: translate( -50%, -10px )
+    }
+    70% {
+        transform: translate( -50%, -10px )
+    }
+    100% {
+        transform: translate( -50%, 0 )
+    }
+}
+
+@keyframes ships-L {
+    0% {
+        transform: translate( 0, 0 )
+    }
+    50% {
+        transform: translate( 0, 40px )
+    }
+    100% {
+        transform: translate( 0, 0 )
+    }
+}
+
+@keyframes ship-R {
+    0% {
+        transform: translate( 0, 0 )
+    }
+    50% {
+        transform: translate( 0, -20px )
+    }
+    100% {
+        transform: translate( 0, 0 )
+    }
+}
+
+@keyframes bottle {
+    0% {
+        top: 130%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes city {
+    0% {
+        transform: translate( 0, -50% ) scale( .8 );
+    }
+    100% {
+        transform: translate( 0, -50% ) scale( .9 );
+    }
+}
+
+@keyframes logo-type {
+    0% {
+        opacity: 0;
+        transform: translateY( -30px );
+    }
+    100% {
+        opacity: 1;
+        transform: translateY( 0 )
+    }
+}
+
+@keyframes copy-container {
+    0% {
+        opacity: 0;
+        transform: translateY( -20px )
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateY( 0 )
+        
+    }
+}
+
+@keyframes copy-button {
+    0% {
+        opacity: 0;
+        transform: translateY( 20px )
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateY( 0 )
+        
+    }
+}
+
+/* SECTION 1 FINISH */
+
+.section2 {
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        .copy {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+
+            img {
+                width: 107px;
+                margin:  5px 0;
+            }
+        }
+
+        .monaxo {
+                width: 60%;
+                position: absolute;
+                bottom:2%;
+                left: 0%;
+                z-index: 21;
+                left: -100%;
+        }
+        .train {
+            width: 36%;
+            position: absolute;
+            bottom:2%;
+            right: -100%;
+            z-index: 21;
+        }
+
+        .petros {
+            width: 60%;
+            position: absolute;
+            bottom:16%;
+            right: -100%;
+            z-index: 20;
+        }
+    } 
+}
+
+@media only screen and (max-width: $breakPoint) {
+    .section2 {
+        .container {
+            .copy {
+                margin: 0;
+                padding-top: 30px;
+                width: 100%;
+                background: #21657c;
+                height: 45%;
+
+                .copy-title {
+                    text-shadow: 0 2px 0 #2c2a25;
+                    color: #efd5ac;
+                }
+
+                .copy-subtitle {
+                    font-size: 18px;
+                    color: #efd5ac;
+                }
+
+                .copy-p {
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+
+            .monaxo {
+                animation: none !important;
+                bottom: 10%;
+                z-index: 20;
+                width: 90%;
+                left:0;
+            }
+            .train {
+                animation: none !important;
+                bottom: 6%;
+                z-index: 22;
+                width: 55%;
+                right: 0;
+            }
+
+            .petros {
+                animation: none !important;
+                bottom: 17%;
+                right: -13%;
+                transform: rotate(9deg);
+                z-index: 21;
+                width: 80%;
+            }
+
+        }
+    }
+}
+
+@keyframes monaxo {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes train {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes petros {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: -6%;
+    }
+}
+
+.section3 {
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+
+        .cont1 {
+
+            .copy {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 300px;
+
+                img {
+                    width: 107px;
+                    margin:  5px 0;
+                }
+            }
+
+            .petros-secret {
+                width: 60%;
+                position: relative;
+                margin-left: -5%;
+                align-self: flex-end;
+
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+        .png-sprite {
+            width: 30vw;
+            height: 0;
+            position: absolute;
+            top:50%;
+            left:49%;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: visible;
+        }
+
+            .png-animation {
+                background-image : url( ../images/Section3/png-anim.png );
+                background-repeat: no-repeat;
+                z-index: 21;
+                width: 290px;
+                height: 270px;
+                animation: moveY-section3 1s steps( 36 ) infinite;
+                background-position: center;
+                transform: scale( .35 );
+                display: none;
+            }
+        }
+
+        .cont2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+    
+            .machine {
+                width: 80%;
+                position: relative;
+                transform: translate( 145%, 0 ) scale( 1 );
+                align-self: flex-end;
+                
+                img {
+                    width: 100%;
+                    display: block;
+                }
+    
+                .png-sprite {
+                    width: 30vw;
+                    height: 0;
+                    position: absolute;
+                    top:47.5%;
+                    left:56%;
+                    background: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: visible;
+                }
+          
+                  .png-animation {
+                      background-image : url( ../images/Section4/png-anim-sec4.png);
+                      background-repeat: no-repeat;
+                      z-index: 21;
+                      width: 359px;
+                      height: 362px;
+                      animation: moveY-section4 1s steps( 24 ) infinite;
+                      background-position: center;
+                      transform: scale( .9 );
+                  }
+            }
+    
+            .copy {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transform: translateX( 100% );
+                margin-top: 35vh;
+    
+                img {
+                    width: 107px;
+                    margin:  5px 0;
+                }
+            }
+          }
+}
+
+@media only screen and (max-width: $breakPoint) {
+    .section3 {
+        width: 100vw;
+        height: 200vh;
+        display: block;
+        transition: transform 0s;
+
+        .cont1 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+
+            .copy {
+                margin: 0;
+                padding-top: 30px;
+                width: 100%;
+                background: #21657c;
+                height: 45%;
+
+                .copy-title {
+                    text-shadow: 0 2px 0 #2c2a25;
+                    color: #efd5ac;
+                }
+
+                .copy-subtitle {
+                    font-size: 18px;
+                    color: #efd5ac;
+                }
+
+                .copy-p {
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+
+            .petros-secret {
+                width:100%;
+            
+                .png-sprite {
+                    display: none;
+                }
+            }
+        }
+        .cont2 {
+            height: 100vh;
+            display: grid;
+            grid-template: repeat( 2, auto ) / 1fr;
+            padding: 0;
+            
+
+            .copy {
+                margin: 0;
+                padding-top: 30px;
+                width: 100%;
+                background: #21657c;
+                height: 100%;
+                grid-row: 1 / 2;
+
+                .copy-title {
+                    text-shadow: 0 2px 0 #2c2a25;
+                    color: #efd5ac;
+                }
+
+                .copy-subtitle {
+                    font-size: 18px;
+                    color: #efd5ac;
+                }
+
+                .copy-p {
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+
+            .machine {
+                animation: none !important;
+                transform: translate( -12%, 0 ) scale( 1 );
+                width: 145%;
+                margin: 20px 0;
+                grid-row: 2 / 3;
+
+                .png-sprite {
+                    display: none;
+                }
+            }
+
+            .copy {
+                animation: none !important;
+                transform: translateX( 0 );
+            }
+        }
+
+    }
+}
+
+@keyframes moveY-section3{
+    from{background-position-Y:0;}
+    to{background-position-Y:-10800px;}
+  }
+
+  
+
+  
+
+  @keyframes moveY-section4{
+    from{background-position-Y:0;}
+    to{background-position-Y:-9600px;}
+  }
+
+  @keyframes machine {
+      0% {
+        transform: translate( 145%, 0)  scale( 1 );
+      }
+      50% {
+        transform: translate( -25%, 0 ) scale( 1 );
+      }
+      100% {
+        transform: translate( -25%, -20% ) scale( 1.2 );
+      }
+  }
+  @keyframes machineReverse {
+    0% {
+        transform: translate( -25%, -20% ) scale( 1.2 );
+    }
+    50% {
+        transform: translate( -25%, 0 ) scale( 1 );
+    }
+    100% {
+        transform: translate( 145%, 0)  scale( 1 );
+    }
+}
+
+  
+
+  @keyframes copy-sect4 {
+    0% {
+        transform: translateX( 100% );
+    }
+    100% {
+        transform: translateX( 0 );
+    }
+}
+
+@keyframes copy-sect4Reverse {
+    0% {
+        transform: translateX( 0 );
+    }
+    100% {
+        transform: translateX( 100% );
+    }
+}
+
+.section4 {
+
+    .cont1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: 1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .copy {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10%;
+
+            img {
+                width: 107px;
+                margin:  5px 0;
+            }
+        }
+
+        .factory {
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 21;
+        }
+
+        .petros-factory {
+            width: 30%;
+            display: block;
+            position: absolute;
+            bottom:0;
+            left: 37%;
+            z-index: 20;
+            transition: transform 1s ease-in-out;
+            transform: translateY( 70% );
+        }
+
+        .hand-key {
+            width: 25%;
+            display: block;
+            position: absolute;
+            bottom:7%;
+            left: 0%;
+            z-index: 22;
+            transform: translateX( -100% );
+            transition: transform 1s ease-in-out 1s;
+            transform-origin: 0% 50%;
+        }
+
+        .clouds {
+            display: none;
+        }
+    }
+
+    .cont2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: 1s ease-in-out;
+
+        .floor {
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 21;
+            transform: translateY( 0 );
+        }
+
+        .mamos-beer {
+            width: 10%;
+            max-width: 440px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate( -50%, 0 );
+            z-index: 25;
+        }
+
+        .mamos-glass {
+            width: 25%;
+            max-width: 440px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 52%;
+            transform: translate( -50%, 0 );
+            z-index: 25;
+        }
+
+        .likiskos1 {
+            width: 10%;
+            max-width: 440px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 31%;
+            z-index: 23;
+        }
+
+        .likiskos3 {
+            width: 10%;
+            max-width: 440px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 27%;
+            z-index: 22;
+            transform: translateX( 100% );
+        }
+        .likiskos2 {
+            width: 10%;
+            max-width: 440px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 53%;
+            z-index: 23;
+        }
+        .likiskos4 {
+            width: 10%;
+            max-width: 440px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 58%;
+            z-index: 22;
+            transform: translateX( -140% );
+        }
+
+        .logotypo {
+            width: 15%;
+            position: absolute;
+            top:26%;
+            left: 10%;
+        }
+
+        .bg {
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        .ballon {
+            width: 8%;
+            display: block;
+            position: absolute;
+            bottom: 42%;
+            left: 56%;
+            z-index: 20;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: #21637a;
+            border: 2px solid #b6a488;
+            box-shadow: 0 5px 5px 0 rgba(44, 42, 37, .2);
+            width: 160px;
+            height: 50px;
+            font-size: 14px;
+            font-family: Burford;
+            margin-top: 30px;
+            padding-top: 4px;
+            font-weight: 400;
+            position: absolute;
+            top:26%;
+            left: 80%;
+            opacity: 0;
+            transform: translateY( 20px );
+            background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: $breakPoint) {
+    .section4 {
+
+        .cont1 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            transition: 0s ease-in-out;
+
+            .copy {
+                margin: 0;
+                padding-top: 30px;
+                width: 100%;
+                background: #21657c;
+                height: 45%;
+
+                .copy-title {
+                    text-shadow: 0 2px 0 #2c2a25;
+                    color: #efd5ac;
+                }
+
+                .copy-subtitle {
+                    font-size: 18px;
+                    color: #efd5ac;
+                }
+
+                .copy-p {
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+    
+            .petros-factory {
+                animation: none !important;
+                transform: translateY( 0 );
+                width: 56%;
+                left: 51%;
+                bottom: -2%;
+            }
+    
+            .hand-key {
+                animation: none !important;
+                transform: translateX( -2% );
+                width: 35%;
+            }
+
+            .factory {
+                width: 170%;
+                left: -5%;
+            }
+
+            .clouds {
+                position: absolute;
+                bottom: -19%;
+                left: 0;
+                width: 100%;
+                z-index: 27;
+                display: block;
+            }
+        }
+
+        .cont2 {
+            transition: 0s ease-in-out;
+
+            .floor {
+                width: 600%;
+            }
+            .mamos-beer {
+                bottom: 24%;
+                width: 14%;
+            }
+    
+            .mamos-glass {
+                bottom: 24%;
+                left: 50%;
+                width: 35%;
+                animation: none !important;
+            }
+    
+            .likiskos1 {
+                bottom: 24%;
+                animation: none !important;
+                left: 25%;
+                width: 15%;
+            }
+    
+            .likiskos3 {
+                bottom: 24%;
+                animation: none !important;
+                transform: translateX( 0 );
+                left: 19%;
+                width: 15%;
+            }
+            .likiskos2 {
+                bottom: 24%;
+                animation: none !important;
+                width: 17%;
+                left: 55%;
+            }
+            .likiskos4 {
+                bottom: 23%;
+                animation: none !important;
+                transform: translateX( 0 );
+                width: 17%;
+                left: 63%;
+            }
+
+            .bg {
+                width: 150%;
+                left: 50%;
+                bottom: 27%;
+                transform: translateX( -50% );
+            }
+
+            .logotypo {
+                width: 40%;
+                position: absolute;
+                top:10%;
+                left: 50%;
+                transform: translateX( -50% );
+            }
+            
+            .ballon {
+                left: 62%;
+            }
+
+            button {
+                width: 50%;
+                height: 65px;
+                font-size: 18px;
+                z-index: 22;
+                top: 75%;
+                left: 50%;
+                transform: translateX( -50% );
+                animation: none !important;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes petros-factory {
+    0% {
+        transform: translateY( 0 )
+    }
+    50% {
+        transform: translateY( 10px )
+    }
+    100% {
+        transform: translateY( 0 )
+    }
+}
+
+@keyframes petros-hand {
+    0% {
+        transform: translateX( -2% ) rotate( 0 );
+    }
+    50% {
+        transform: translateX( -2% ) rotate( 5deg );
+    }
+    100% {
+        transform: translateX( -2% ) rotate( 0 );
+    }
+}
+
+
+@keyframes mamos-glass {
+    0% {
+        left: 52%;
+    }
+    100% {
+        left: 49%;
+    }
+}
+@keyframes likiskos1 {
+    0% {
+        transform: translateX( 100% );
+    }
+    100% {
+        transform: translateX( 0 );
+    }
+}
+@keyframes likiskos2 {
+    0% {
+        transform: translateX( -100% );
+    }
+    100% {
+        transform: translateX( 0 );
+    }
+}
+@keyframes likiskos3 {
+    0% {
+        transform: translateX( -140% );
+    }
+    100% {
+        transform: translateX( 0 );
+    }
+}
+@keyframes button-sec6 {
+    0% {
+        opacity: 0;
+        transform: translateY( 20px )
+    }
+    100% {
+        opacity: 1;
+        transform: translateY( 0 )
+    }
+}
+
+footer {
+    width: 100%;
+    height: 500px;
+    background: red;
+    scroll-snap-align: start;
+    position: relative;
+}
