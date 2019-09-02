@@ -1,3 +1,21 @@
+// Device detection Mobile or Desktop
+var isMobile = false;
+if ( /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test( navigator.userAgent ) 
+    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test( navigator.userAgent.substr( 0, 4 ) ) ) { 
+    isMobile = true;
+}
+if ( isMobile ) {
+    html.style.overflow = `auto`
+    body.style.overflow = `auto`
+}
+
+// If user refresh in a random location website starts from top
+if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual'
+    }
+window.scrollTo( 0, 0 )
+
+
 const sections = document.querySelectorAll( 'section' ),
       sec1_bottle = document.querySelector( '.section1 .bottle' ),
       sec1_logotypo = document.querySelector( '.section1 .logotypo' ),
@@ -27,10 +45,9 @@ const sections = document.querySelectorAll( 'section' ),
       sect3_cont1_copy_subtitle = document.querySelector( '.section3 .cont1 .copy .copy-subtitle' ),
       sect3_cont1_copy_p = document.querySelector( '.section3 .cont1 .copy .copy-p' ),
       sect3_cont1_copy_img = document.querySelector( '.section3 .cont1 .copy img' ),
-      sec3_cont1_petrosSecret_img = document.querySelector( '.section3 .cont1 .petros-secret img' ),
-      sec3_cont2 = document.querySelector( '.section3 .cont2' ),
-      sec3_cont2_machine = document.querySelector( '.section3 .cont2 .machine' ),
-      sec3_cont2_copy = document.querySelector( '.section3 .cont2 .copy' ),
+      sect3_cont1_petrosSecret_img = document.querySelector( '.section3 .cont1 .petros-secret img' ),
+      sect3_cont2 = document.querySelector( '.section3 .cont2' ),
+      sect3_cont2_copy = document.querySelector( '.section3 .cont2 .copy' ),
       sect3_cont2_copy_img = document.querySelector( '.section3 .cont2 .copy img' ),
       sect3_cont2_copy_title = document.querySelector( '.section3 .cont2 .copy .copy-title' ),
       sect3_cont2_copy_subtitle = document.querySelector( '.section3 .cont2 .copy .copy-subtitle' ),
@@ -66,33 +83,37 @@ const sections = document.querySelectorAll( 'section' ),
      
 
       // Section2 png sprite resize
-const petrosSecret = document.querySelector( '.section3 .cont1 .petros-secret img' ),
-pngSprite_likiskos = document.querySelector( '.section3 .cont1 .petros-secret .png-animation' ),
-machineImg = document.querySelector( '.section3 .cont2 .machine img' ),
-pngSprite_lamp = document.querySelector( '.section3 .cont2 .machine .png-animation' )
+    const petrosSecret = document.querySelector( '.section3 .cont1 .petros-secret img' ),
+    pngSprite_likiskos = document.querySelector( '.section3 .cont1 .petros-secret .png-animation' ),
+    machineImg = document.querySelector( '.section3 .cont2 .machine img' ),
+    pngSprite_lamp = document.querySelector( '.section3 .cont2 .machine .png-animation' )
+
+    const sec1_btn_watchMovie = document.querySelector( '.section1 .container .copy button' ),
+       sec1_windowPlayer = document.querySelector( '.section1 .videoWindow' ),
+       sec1_closeWindowPlayer = document.querySelector( '.section1 .videoWindow .closeBtn' )
+
+    const html =  document.querySelector( 'html' ),
+            body =  document.querySelector( 'body' )
 
 
-
-const html =  document.querySelector( 'html' ),
-        body =  document.querySelector( 'body' )
-
-// device detection
-var isMobile = false;
-if ( /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test( navigator.userAgent ) 
-    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test( navigator.userAgent.substr( 0, 4 ) ) ) { 
-    isMobile = true;
-}
-if ( isMobile ) {
-    html.style.overflow = `auto`
-    body.style.overflow = `auto`
-}
-
-if ('scrollRestoration' in window.history) {
-    window.history.scrollRestoration = 'manual'
-    }
-window.scrollTo( 0, 0 )
 
 window.addEventListener( 'load', () => {
+    sec1_copy.style.transform = `translate(-50%, 0) scale(0.6)`
+    sect2_copy_img.src = `../images/Section2/text-divider.png`
+    sect3_cont1_copy_img.src = `../images/Section2/text-divider.png`
+    sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
+    sect4_copy_img.src = `../images/Section2/text-divider.png`
+
+    if ( isMobile && window.innerWidth < 600 ) {
+        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
+        Sec3_cont1_changeImage = true
+        section4.style.height = '200vh'
+        section4_cont1.style.height = '50%'
+        section4_cont2.style.height = '50%'
+        section4_cont1.style.transform = `translateY( 0 )`
+        section4_cont2.style.transform = `translateY( 0 )`
+    } 
+
     if ( isMobile && window.innerWidth > 600 ) {
         section4.style.height = '200vh'
         section4_cont1.style.height = '50%'
@@ -224,18 +245,18 @@ window.addEventListener( 'load', () => {
         `
         sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
 
-        sec3_cont2.style.cssText = `
+        sect3_cont2.style.cssText = `
             height: 100vh;
             display: grid;
             column-template: auto auto / 1fr
         `
 
-        sec3_cont2_machine.style.cssText = `
+        sect3_cont2_machine.style.cssText = `
             transform: translate( 0, 0 ) scale( 1 );
             grid-row: 2 / 3;
             width: 100%;
         `
-        sec3_cont2_copy.style.cssText = `
+        sect3_cont2_copy.style.cssText = `
             transform: translateX( 0 );
             grid-row: 1 / 2;
             width: 100%;
@@ -315,10 +336,9 @@ window.addEventListener( 'load', () => {
 
 
 
-
-// Scroll to next section
-
-
+  ////////////////////////////
+ // Scroll to next section //
+////////////////////////////
 // Stop Wheel after the first wheeling
 function throttle( func, limit ) {
     let inThrottle
@@ -339,7 +359,6 @@ const footer = document.querySelector( 'footer' ),
 
 let direction = 1, currentSection = 1
 
-
 // Fix double section if the user refresh in a random position
 if ( currentSection > 3 && window.innerWidth > 600 && !isMobile ) sections[ 2 ].style.transform = 'translateX( -50% )'
 
@@ -348,11 +367,6 @@ if ( currentSection > 4 ) {
     sections[ 2 ].style.transform = 'translateX( -50% )'
     machine.style.animation = `machine 0s ease-in-out 0s forwards`
     copy.style.animation = `copy-sect4 0s ease-in-out 0s forwards`
-}
-
-//Fix section 3
-if ( currentSection == 3 ) {
-
 }
 
 // Wheel event
@@ -377,7 +391,6 @@ function smoothScroll( duration ) {
     let startPosition = window.pageYOffset
     if ( currentSection == 7 && direction == 1 || currentSection == 6 && direction == -1 ) {
         vh = footer.clientHeight
-        
     }
     let distance = direction * vh
     let startTime = null
@@ -433,11 +446,6 @@ function smoothScroll( duration ) {
             }
         }
     }
-
-
-
-           
-
     function animation( currentTime ) {
         if ( startTime === null ) startTime = currentTime
         let timeElapsed = currentTime - startTime
@@ -452,7 +460,6 @@ function smoothScroll( duration ) {
         t -= 2
         return -c / 2 * ( t * t * t * t - 2 ) + b
     }
-    
 }
       
 
@@ -463,22 +470,9 @@ const section3_chlidren = document.querySelectorAll( '.section3 .container' )
 
 let Sec3_cont1_changeImage = false
 
-
-
-
 let scaleCopy
 
-
-
-
-
-
-
  // Section1 open window player
- const sec1_btn_watchMovie = document.querySelector( '.section1 .container .copy button' ),
-       sec1_windowPlayer = document.querySelector( '.section1 .videoWindow' ),
-       sec1_closeWindowPlayer = document.querySelector( '.section1 .videoWindow .closeBtn' )
-
 sec1_btn_watchMovie.addEventListener( 'click', () => {
     sec1_windowPlayer.style.top = `0`
 } )
@@ -486,19 +480,12 @@ sec1_closeWindowPlayer.addEventListener( 'click', () => {
     sec1_windowPlayer.style.top = `-100%`
 } )
 
-
-
-
-
-
-
-
-
-
 window.addEventListener( 'resize', initialize_Upadate )
 window.addEventListener( 'load', initialize_Upadate )
 
 function initialize_Upadate() {
+
+    // Fix sections on resize
     if ( window.innerWidth > 600 && !isMobile ) {
         if ( currentSection == 1 ) {
             window.scrollTo( 0, 0 )
@@ -523,7 +510,7 @@ function initialize_Upadate() {
             window.scrollTo( 0, 0 )
             currentSection = 1
         }
-        // Section 3
+        // Section 3 fix on resize
         if ( currentSection > 3 ) sections[ 2 ].style.transform = 'translateX( -50% )'
         sections[ 2 ].style.width = '200vw'
         sections[ 2 ].style.display = 'flex'
@@ -533,12 +520,11 @@ function initialize_Upadate() {
         section3_chlidren.forEach( subDiv => {
             subDiv.style.width = '100vw'
         } )
-
         section4.style.height = '100vh'
         section4_cont1.style.height = '100%'
         section4_cont2.style.height = '100%'
 
-
+        // Section1 add Keyframes
         sect1_shipsR.style.animation = `ship-R 4s ease-in-out infinite`
         sect1_shipsL.style.animation = `ships-L 4s ease-in-out infinite`
         sec1_bottle.style.animation = ` bottle 1.3s ease-in-out`
@@ -548,8 +534,17 @@ function initialize_Upadate() {
         sec1_city.style.animation = `city 1s ease-in-out forwards`
 
 
-    } else if ( window.innerWidth < 600 && !isMobile ) {
+        scaleCopy = Math.max( .8, ( window.innerWidth / 1700 ) )
+        sec1_copy.style.transform = `scale( ${scaleCopy} )`
+        
+        sect2_copy_img.src = `../images/Section1/text-divider.png`
+        sect3_cont1_copy_img.src = `../images/Section1/text-divider.png`
+        sect3_cont2_copy_img.src = `../images/Section1/text-divider.png`
+        sect4_copy_img.src = `../images/Section1/text-divider.png`
 
+        pngSprite_likiskos.style.transform = `scale( ${ petrosSecret.clientWidth / 2500 } )`
+        pngSprite_lamp.style.transform = `scale( ${ machineImg.clientWidth / 1870 } )`
+    } else if ( window.innerWidth < 600 && !isMobile ) {
         // Fix scrolling position on resize
         if ( currentSection == 1 ) {
             window.scrollTo( 0, 0 )
@@ -569,8 +564,6 @@ function initialize_Upadate() {
             window.scrollTo( 0, 0 )
             currentSection = 1
         }
-
-       
         // Section 3
         sections[ 2 ].style.width = '100vw'
         sections[ 2 ].style.display = 'block'
@@ -581,35 +574,19 @@ function initialize_Upadate() {
         section3_chlidren.forEach( subDiv => {
             subDiv.style.width = '100vw'
         } )
-
-        
-
         sect3_cont1_petrosSecret_img.style.width = `100%`
         sect3_cont2_machine.style.width = `145%`
-
         sect4_cont1_petrosFactory.style.width = `56%`
+
+        sec1_copy.style.transform = `translate(-50%, 0) scale(0.6)`
+        sect2_copy_img.src = `../images/Section2/text-divider.png`
+        sect3_cont1_copy_img.src = `../images/Section2/text-divider.png`
+        sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
+        sect4_copy_img.src = `../images/Section2/text-divider.png`
     }
 
     
-    if ( window.innerWidth < 600 || isMobile ) {
-        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
-        Sec3_cont1_changeImage = true
-
-        section4.style.height = '200vh'
-        section4_cont1.style.height = '50%'
-        section4_cont2.style.height = '50%'
-        section4_cont1.style.transform = `translateY( 0 )`
-        section4_cont2.style.transform = `translateY( 0 )`
-    } 
-
-    if ( window.innerWidth > 600 && !isMobile && Sec3_cont1_changeImage ) {
-        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret.png`
-    }
-
-
-
-
-    if ( window.innerHeight < 600 && window.innerWidth > 600 && !isMobile ) {
+    if ( window.innerHeight < 600 && window.innerWidth > 600 ) {
         sec1_bottle.style.maxWidth = `130px`
         sect1_shipsL.style.width = `17%`
         sect1_shipsR.style.width = `17%`
@@ -619,7 +596,7 @@ function initialize_Upadate() {
         sec2_petros.style.width = `45%`
 
         sect3_cont1_petrosSecret.style.width = `48%`
-        sect3_cont1_pngSprite.style.left = `43%`
+        sect3_cont1_pngSprite.style.left = `37.5%`
         sect3_cont2_machine.style.width = `50%`
         sect3_cont2_pngSprite.style.left = `48.5%`
 
@@ -627,7 +604,7 @@ function initialize_Upadate() {
         //sect4_cont1_handKey.style.width = ``
         sect4_cont2_mamosBeer.style.width = `8%`
         sect4_cont2_mamosGlass.style.width = `20%`
-    } else if ( window.innerHeight < 750 && window.innerWidth > 600 && !isMobile  ) {
+    } else if ( window.innerHeight < 750 && window.innerWidth > 600 ) {
         sec1_bottle.style.maxWidth = `150px`
         sec1_bottle.style.maxHeight = `430px`
 
@@ -636,7 +613,7 @@ function initialize_Upadate() {
 
 
         sect3_cont1_petrosSecret.style.width = `54%`
-        sect3_cont1_pngSprite.style.left = `46%`
+        sect3_cont1_pngSprite.style.left = `41%`
         sect3_cont2_machine.style.width = `65%`
         sect3_cont2_pngSprite.style.left = `54.5%`
 
@@ -646,7 +623,7 @@ function initialize_Upadate() {
         sect4_cont2_mamosGlass.style.width = `23%`
         likiskos1.style.left = `33%`
         likiskos3.style.left = `29%`
-    } else if ( window.innerHeight > 750 && window.innerWidth > 600 && !isMobile ) {
+    } else if ( window.innerHeight > 750 && window.innerWidth > 600 ) {
         sec1_bottle.style.maxWidth = ``
         sec1_bottle.style.maxHeight = ``
 
@@ -655,7 +632,7 @@ function initialize_Upadate() {
         sec2_petros.style.width = `60%`
 
         sect3_cont1_petrosSecret.style.width = `60%`
-        sect3_cont1_pngSprite.style.left = `49%`
+        sect3_cont1_pngSprite.style.left = `45%`
         sect3_cont2_machine.style.width = `80%`
         sect3_cont2_pngSprite.style.left = `56%`
 
@@ -666,30 +643,9 @@ function initialize_Upadate() {
         likiskos1.style.left = `31%`
         likiskos3.style.left = `27%`
     }
-    
 
-    if ( innerWidth > 600 ) {
-        if ( !isMobile ) {
-            scaleCopy = Math.max( .8, ( window.innerWidth / 1700 ) )
-            sec1_copy.style.transform = `scale( ${scaleCopy} )`
- 
-        }
-        
-        sect2_copy_img.src = `../images/Section1/text-divider.png`
-        sect3_cont1_copy_img.src = `../images/Section1/text-divider.png`
-        sect3_cont2_copy_img.src = `../images/Section1/text-divider.png`
-        sect4_copy_img.src = `../images/Section1/text-divider.png`
-    } else {
-        sec1_copy.style.transform = `translate(-50%, 0) scale(0.6)`
-        sect2_copy_img.src = `../images/Section2/text-divider.png`
-        sect3_cont1_copy_img.src = `../images/Section2/text-divider.png`
-        sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
-        sect4_copy_img.src = `../images/Section2/text-divider.png`
+
+    if ( window.innerWidth > 600 && !isMobile && Sec3_cont1_changeImage ) {
+        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret.png`
     }
-
-
-
-    pngSprite_likiskos.style.transform = `scale( ${ petrosSecret.clientWidth / 2500 } )`
-    pngSprite_lamp.style.transform = `scale( ${ machineImg.clientWidth / 1870 } )`
-
 }

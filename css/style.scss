@@ -103,10 +103,6 @@ section {
         background-repeat: no-repeat;
         background-position: 50%;
 
-        .video {
-            
-        }
-
         .closeBtn {
             position: relative;
             font-family: Burford;
@@ -195,7 +191,7 @@ section {
             position: absolute;
             bottom: 2%;
             left: 50%;
-            animation: scrollArrow 1.5s ease-in-out infinite;
+            //animation: scrollArrow 1.5s ease-in-out infinite;
             z-index: 20;
             transform: translateX( -50% );
         }
@@ -295,34 +291,33 @@ section {
     }
 }
 
-
 @media only screen and (max-width: $breakPoint) {
     .section1 {
         .container {
             .city {
                 width: 180%;
-                animation: none;
+                animation: none !important;
                 top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
     
             .bottle {
-                animation: none;
+                animation: none !important;
                 transform: translate(-50%, -45%);
                 width: 18%;
                 top:45%;
             }
     
             .Ships-L {
-                animation: none;
+                animation: none !important;
                 top: 50%;
                 left: -4%;
-                width: 35%;
+                width: 35% ;
             }
     
             .Ships-R {
-                animation: none;
+                animation: none !important;
                 top: 50%;
                 right: -2%;
                 width: 35%;
@@ -345,14 +340,14 @@ section {
             }
     
             .scrollArrow {
-                animation: none;
+                animation: none !important;
                 top: 96%;
             }
             .logotypo {
                 top: 5%;
                 left: 50%;
                 transform: translateX( -50% );
-                animation: none;
+                animation: none !important;
                 opacity: 1;
             }
             .copy {
@@ -363,111 +358,16 @@ section {
                 
                 
                 .copy-container {
-                    animation: none;
+                    animation: none !important;
                     opacity: 1;
                 }
 
                 button {
-                    animation: none;
+                    animation: none !important;
                     opacity: 1;
                 }
             }
         }
-    }
-}
-
-@keyframes scrollArrow {
-    0% {
-        transform: translate( -50%, 0 )
-    }
-    50% {
-        transform: translate( -50%, -10px )
-    }
-    70% {
-        transform: translate( -50%, -10px )
-    }
-    100% {
-        transform: translate( -50%, 0 )
-    }
-}
-
-@keyframes ships-L {
-    0% {
-        transform: translate( 0, 0 )
-    }
-    50% {
-        transform: translate( 0, 40px )
-    }
-    100% {
-        transform: translate( 0, 0 )
-    }
-}
-
-@keyframes ship-R {
-    0% {
-        transform: translate( 0, 0 )
-    }
-    50% {
-        transform: translate( 0, -20px )
-    }
-    100% {
-        transform: translate( 0, 0 )
-    }
-}
-
-@keyframes bottle {
-    0% {
-        top: 130%;
-    }
-
-    100% {
-        top: 50%;
-    }
-}
-
-@keyframes city {
-    0% {
-        transform: translate( 0, -50% ) scale( .8 );
-    }
-    100% {
-        transform: translate( 0, -50% ) scale( .9 );
-    }
-}
-
-@keyframes logo-type {
-    0% {
-        opacity: 0;
-        transform: translateY( -30px );
-    }
-    100% {
-        opacity: 1;
-        transform: translateY( 0 )
-    }
-}
-
-@keyframes copy-container {
-    0% {
-        opacity: 0;
-        transform: translateY( -20px )
-        
-    }
-    100% {
-        opacity: 1;
-        transform: translateY( 0 )
-        
-    }
-}
-
-@keyframes copy-button {
-    0% {
-        opacity: 0;
-        transform: translateY( 20px )
-        
-    }
-    100% {
-        opacity: 1;
-        transform: translateY( 0 )
-        
     }
 }
 
@@ -575,33 +475,6 @@ section {
     }
 }
 
-@keyframes monaxo {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0%;
-    }
-}
-
-@keyframes train {
-    0% {
-        right: -100%;
-    }
-    100% {
-        right: 0%;
-    }
-}
-
-@keyframes petros {
-    0% {
-        right: -100%;
-    }
-    100% {
-        right: -6%;
-    }
-}
-
 .section3 {
 
     .container {
@@ -641,11 +514,11 @@ section {
             }
 
         .png-sprite {
-            width: 30vw;
+            width: 35vw;
             height: 0;
             position: absolute;
             top:50%;
-            left:49%;
+            left:45%;
             background: transparent;
             display: flex;
             justify-content: center;
@@ -817,67 +690,8 @@ section {
                 transform: translateX( 0 );
             }
         }
-
     }
 }
-
-@keyframes moveY-section3{
-    from{background-position-Y:0;}
-    to{background-position-Y:-10800px;}
-  }
-
-  
-
-  
-
-  @keyframes moveY-section4{
-    from{background-position-Y:0;}
-    to{background-position-Y:-9600px;}
-  }
-
-  @keyframes machine {
-      0% {
-        transform: translate( 145%, 0)  scale( 1 );
-      }
-      50% {
-        transform: translate( -25%, 0 ) scale( 1 );
-      }
-      100% {
-        transform: translate( -25%, -20% ) scale( 1.2 );
-      }
-  }
-  @keyframes machineReverse {
-    0% {
-        transform: translate( -25%, -20% ) scale( 1.2 );
-    }
-    50% {
-        transform: translate( -25%, 0 ) scale( 1 );
-    }
-    100% {
-        transform: translate( 145%, 0)  scale( 1 );
-    }
-}
-
-  
-
-  @keyframes copy-sect4 {
-    0% {
-        transform: translateX( 100% );
-    }
-    100% {
-        transform: translateX( 0 );
-    }
-}
-
-@keyframes copy-sect4Reverse {
-    0% {
-        transform: translateX( 0 );
-    }
-    100% {
-        transform: translateX( 100% );
-    }
-}
-
 .section4 {
 
     .cont1 {
@@ -1065,9 +879,7 @@ section {
             background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
         }
     }
-
 }
-
 
 @media only screen and (max-width: $breakPoint) {
     .section4 {
@@ -1197,7 +1009,7 @@ section {
             }
 
             button {
-                width: 50%;
+                width: 70%;
                 height: 65px;
                 font-size: 18px;
                 z-index: 22;
@@ -1208,74 +1020,6 @@ section {
                 opacity: 1;
             }
         }
-    }
-}
-
-@keyframes petros-factory {
-    0% {
-        transform: translateY( 0 )
-    }
-    50% {
-        transform: translateY( 10px )
-    }
-    100% {
-        transform: translateY( 0 )
-    }
-}
-
-@keyframes petros-hand {
-    0% {
-        transform: translateX( -2% ) rotate( 0 );
-    }
-    50% {
-        transform: translateX( -2% ) rotate( 5deg );
-    }
-    100% {
-        transform: translateX( -2% ) rotate( 0 );
-    }
-}
-
-
-@keyframes mamos-glass {
-    0% {
-        left: 52%;
-    }
-    100% {
-        left: 49%;
-    }
-}
-@keyframes likiskos1 {
-    0% {
-        transform: translateX( 100% );
-    }
-    100% {
-        transform: translateX( 0 );
-    }
-}
-@keyframes likiskos2 {
-    0% {
-        transform: translateX( -100% );
-    }
-    100% {
-        transform: translateX( 0 );
-    }
-}
-@keyframes likiskos3 {
-    0% {
-        transform: translateX( -140% );
-    }
-    100% {
-        transform: translateX( 0 );
-    }
-}
-@keyframes button-sec6 {
-    0% {
-        opacity: 0;
-        transform: translateY( 20px )
-    }
-    100% {
-        opacity: 1;
-        transform: translateY( 0 )
     }
 }
 
