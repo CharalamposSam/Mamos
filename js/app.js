@@ -21,19 +21,30 @@ const sections = document.querySelectorAll( 'section' ),
       sect3_cont1_pngSprite = document.querySelector( '.section3 .cont1 .petros-secret .png-sprite' ),
       sect3_cont2_machine = document.querySelector( '.section3 .cont2 .machine' ),
       sect3_cont2_pngSprite = document.querySelector( '.section3 .cont2 .png-sprite' ),
-      sect3_1_copy = document.querySelector( '.section3 .cont1 .copy' ),
-      sect3_1 = document.querySelector( '.section3 .cont1' ),
-      sect3_1_copy_title = document.querySelector( '.section3 .cont1 .copy .copy-title' ),
-      sect3_1_copy_subtitle = document.querySelector( '.section3 .cont1 .copy .copy-subtitle' ),
-      sect3_1_copy_p = document.querySelector( '.section3 .cont1 .copy .copy-p' ),
-      sect3_1_copy_img = document.querySelector( '.section3 .cont1 .copy img' ),
-      sect3_2_copy_img = document.querySelector( '.section3 .cont2 .copy img' ),
+      sect3_cont1_copy = document.querySelector( '.section3 .cont1 .copy' ),
+      sect3_cont1 = document.querySelector( '.section3 .cont1' ),
+      sect3_cont1_copy_title = document.querySelector( '.section3 .cont1 .copy .copy-title' ),
+      sect3_cont1_copy_subtitle = document.querySelector( '.section3 .cont1 .copy .copy-subtitle' ),
+      sect3_cont1_copy_p = document.querySelector( '.section3 .cont1 .copy .copy-p' ),
+      sect3_cont1_copy_img = document.querySelector( '.section3 .cont1 .copy img' ),
       sec3_cont1_petrosSecret_img = document.querySelector( '.section3 .cont1 .petros-secret img' ),
+      sec3_cont2 = document.querySelector( '.section3 .cont2' ),
+      sec3_cont2_machine = document.querySelector( '.section3 .cont2 .machine' ),
+      sec3_cont2_copy = document.querySelector( '.section3 .cont2 .copy' ),
+      sect3_cont2_copy_img = document.querySelector( '.section3 .cont2 .copy img' ),
+      sect3_cont2_copy_title = document.querySelector( '.section3 .cont2 .copy .copy-title' ),
+      sect3_cont2_copy_subtitle = document.querySelector( '.section3 .cont2 .copy .copy-subtitle' ),
+      sect3_cont2_copy_p = document.querySelector( '.section3 .cont2 .copy .copy-p' ),
       section4 = document.querySelector( '.section4' ),
       section4_cont1 = document.querySelector( '.section4 .cont1' ),
-      section4_cont2 = document.querySelector( '.section4 .cont2' ),
+      section4_cont1_copy = document.querySelector( '.section4 .cont1 .copy' ),
+      section4_cont1_copy_title = document.querySelector( '.section4 .cont1 .copy .copy-title' ),
+      section4_cont1_copy_subtitle = document.querySelector( '.section4 .cont1 .copy .copy-subtitle' ),
+      section4_cont1_copy_p = document.querySelector( '.section4 .cont1 .copy .copy-p' ),
       sect4_cont1_petrosFactory = document.querySelector( '.section4 .cont1 .petros-factory' ),
       sect4_cont1_handKey = document.querySelector( '.section4 .cont1 .hand-key' ),
+      section4_cont2 = document.querySelector( '.section4 .cont2' ),
+      section4_cont2_logotypo = document.querySelector( '.section4 .cont2 .logotypo' ),
       sect4_cont2_mamosBeer = document.querySelector( '.section4 .cont2 .mamos-beer' ),
       sect4_cont2_mamosGlass = document.querySelector( '.section4 .cont2 .mamos-glass' ),
       sect4_cont2_ballon = document.querySelector( '.section4 .cont2 .ballon' ),
@@ -54,7 +65,11 @@ const sections = document.querySelectorAll( 'section' ),
       sect4_cont1_clouds = document.querySelector( '.section4 .cont1 .clouds' )
      
 
-      
+      // Section2 png sprite resize
+const petrosSecret = document.querySelector( '.section3 .cont1 .petros-secret img' ),
+pngSprite_likiskos = document.querySelector( '.section3 .cont1 .petros-secret .png-animation' ),
+machineImg = document.querySelector( '.section3 .cont2 .machine img' ),
+pngSprite_lamp = document.querySelector( '.section3 .cont2 .machine .png-animation' )
 
 
 
@@ -167,31 +182,39 @@ window.addEventListener( 'load', () => {
         `
 
         
+        section3.style.cssText = `
+            height: 200vh;
+        `
+        sect3_cont1.style.cssText = `
+            height: 100vh;
+        `
+        
+
         sect3_cont1_petrosSecret.style.cssText = `
             width:100%;
         `
-        sect3_1_copy.style.cssText = `
+        sect3_cont1_copy.style.cssText = `
             margin: 0;
             padding-top: 30px;
             width: 100%;
-            background: #21657c;
+            background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
             height: 45%;
         `
 
-        sect3_1_copy_title.style.cssText = `
+        sect3_cont1_copy_title.style.cssText = `
             text-shadow: 0 2px 0 #2c2a25;
             color: #efd5ac;
         `
-        sect3_1_copy_subtitle.style.cssText = `
+        sect3_cont1_copy_subtitle.style.cssText = `
             font-size: 18px;
             color: #efd5ac;
         `
-        sect3_1_copy_p.style.cssText = `
+        sect3_cont1_copy_p.style.cssText = `
                 font-size: 12px;
                 color: white;
         `
 
-        sect3_1.style.cssText = `
+        sect3_cont1.style.cssText = `
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
@@ -199,7 +222,94 @@ window.addEventListener( 'load', () => {
             width: 100vw;
             height: 100vh;
         `
-        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petsos-secret-likiskos.png`
+        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
+
+        sec3_cont2.style.cssText = `
+            height: 100vh;
+            display: grid;
+            column-template: auto auto / 1fr
+        `
+
+        sec3_cont2_machine.style.cssText = `
+            transform: translate( 0, 0 ) scale( 1 );
+            grid-row: 2 / 3;
+            width: 100%;
+        `
+        sec3_cont2_copy.style.cssText = `
+            transform: translateX( 0 );
+            grid-row: 1 / 2;
+            width: 100%;
+            background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
+            height: 45%;
+        `
+
+        sect3_cont2_copy_title.style.cssText = `
+            text-shadow: 0 2px 0 #2c2a25;
+            color: #efd5ac;
+            padding-top: 30px;
+        `
+        sect3_cont2_copy_subtitle.style.cssText = `
+            font-size: 18px;
+            color: #efd5ac;
+        `
+
+        sect3_cont2_copy_p.style.cssText = `
+            font-size: 12px;
+            color: white;
+        `
+
+        pngSprite_lamp.style.cssText = `
+            display: none;
+        `
+
+        section4_cont1.style.cssText = `
+            display: block;
+        `
+        section4_cont1_copy.style.cssText = `
+            width: 100%;
+            background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
+            height: 45%;
+        `
+
+        section4_cont1_copy_title.style.cssText = `
+            text-shadow: 0 2px 0 #2c2a25;
+            color: #efd5ac;
+            padding-top: 30px;    
+        `
+        section4_cont1_copy_subtitle.style.cssText = `
+            font-size: 18px;
+            color: #efd5ac;
+        `
+        section4_cont1_copy_p.style.cssText = `
+            font-size: 12px;
+            color: white;
+        `
+
+        sect4_cont1_petrosFactory.style.cssText = `
+            transform: translateY( 0 );
+        `
+        sect4_cont1_handKey.style.cssText = `
+            transform: translateX( 0 );
+            bottom: 4%;
+        `
+
+        section4_cont2_logotypo.style.cssText = `
+            left: 50%;
+            transform: translateX( -50% );
+            width:30%;
+        `
+
+        mamosGlass.style.cssText = `
+            left: 49%;
+        `
+        
+        likiskos3.style.cssText = `
+            left: 17%;
+        `
+
+        likiskos4.style.cssText = `
+            left: 72%;
+        `
     }
 } )
 
@@ -377,11 +487,7 @@ sec1_closeWindowPlayer.addEventListener( 'click', () => {
 } )
 
 
-// Section2 png sprite resize
-const petrosSecret = document.querySelector( '.section3 .cont1 .petros-secret img' ),
-      pngSprite_likiskos = document.querySelector( '.section3 .cont1 .petros-secret .png-animation' ),
-      machineImg = document.querySelector( '.section3 .cont2 .machine img' ),
-      pngSprite_lamp = document.querySelector( '.section3 .cont2 .machine .png-animation' )
+
 
 
 
@@ -503,7 +609,7 @@ function initialize_Upadate() {
 
 
 
-    if ( window.innerHeight < 600 && window.innerWidth > 600 ) {
+    if ( window.innerHeight < 600 && window.innerWidth > 600 && !isMobile ) {
         sec1_bottle.style.maxWidth = `130px`
         sect1_shipsL.style.width = `17%`
         sect1_shipsR.style.width = `17%`
@@ -521,7 +627,7 @@ function initialize_Upadate() {
         //sect4_cont1_handKey.style.width = ``
         sect4_cont2_mamosBeer.style.width = `8%`
         sect4_cont2_mamosGlass.style.width = `20%`
-    } else if ( window.innerHeight < 750 && window.innerWidth > 600 ) {
+    } else if ( window.innerHeight < 750 && window.innerWidth > 600 && !isMobile  ) {
         sec1_bottle.style.maxWidth = `150px`
         sec1_bottle.style.maxHeight = `430px`
 
@@ -540,7 +646,7 @@ function initialize_Upadate() {
         sect4_cont2_mamosGlass.style.width = `23%`
         likiskos1.style.left = `33%`
         likiskos3.style.left = `29%`
-    } else if ( window.innerHeight > 750 && window.innerWidth > 600 ) {
+    } else if ( window.innerHeight > 750 && window.innerWidth > 600 && !isMobile ) {
         sec1_bottle.style.maxWidth = ``
         sec1_bottle.style.maxHeight = ``
 
@@ -570,14 +676,14 @@ function initialize_Upadate() {
         }
         
         sect2_copy_img.src = `../images/Section1/text-divider.png`
-        sect3_1_copy_img.src = `../images/Section1/text-divider.png`
-        sect3_2_copy_img.src = `../images/Section1/text-divider.png`
+        sect3_cont1_copy_img.src = `../images/Section1/text-divider.png`
+        sect3_cont2_copy_img.src = `../images/Section1/text-divider.png`
         sect4_copy_img.src = `../images/Section1/text-divider.png`
     } else {
         sec1_copy.style.transform = `translate(-50%, 0) scale(0.6)`
         sect2_copy_img.src = `../images/Section2/text-divider.png`
-        sect3_1_copy_img.src = `../images/Section2/text-divider.png`
-        sect3_2_copy_img.src = `../images/Section2/text-divider.png`
+        sect3_cont1_copy_img.src = `../images/Section2/text-divider.png`
+        sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
         sect4_copy_img.src = `../images/Section2/text-divider.png`
     }
 
