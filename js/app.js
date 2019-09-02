@@ -199,7 +199,7 @@ window.addEventListener( 'load', () => {
             width: 100vw;
             height: 100vh;
         `
-        sec3_cont1_petrosSecret.src = `images/Section3/Petsos-secret-likiskos.png`
+        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petsos-secret-likiskos.png`
     }
 } )
 
@@ -486,7 +486,7 @@ function initialize_Upadate() {
 
     
     if ( window.innerWidth < 600 || isMobile ) {
-        sec3_cont1_petrosSecret.src = `images/Section3/Petsos-secret-likiskos.png`
+        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
         Sec3_cont1_changeImage = true
 
         section4.style.height = '200vh'
@@ -497,7 +497,7 @@ function initialize_Upadate() {
     } 
 
     if ( window.innerWidth > 600 && !isMobile && Sec3_cont1_changeImage ) {
-        sec3_cont1_petrosSecret_img.src = `images/Section3/Petros-secret.png`
+        sec3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret.png`
     }
 
 
@@ -569,16 +569,16 @@ function initialize_Upadate() {
  
         }
         
-        sect2_copy_img.src = `images/Section1/text-divider.png`
-        sect3_1_copy_img.src = `images/Section1/text-divider.png`
-        sect3_2_copy_img.src = `images/Section1/text-divider.png`
-        sect4_copy_img.src = `images/Section1/text-divider.png`
+        sect2_copy_img.src = `../images/Section1/text-divider.png`
+        sect3_1_copy_img.src = `../images/Section1/text-divider.png`
+        sect3_2_copy_img.src = `../images/Section1/text-divider.png`
+        sect4_copy_img.src = `../images/Section1/text-divider.png`
     } else {
         sec1_copy.style.transform = `translate(-50%, 0) scale(0.6)`
-        sect2_copy_img.src = `images/Section2/text-divider.png`
-        sect3_1_copy_img.src = `images/Section2/text-divider.png`
-        sect3_2_copy_img.src = `images/Section2/text-divider.png`
-        sect4_copy_img.src = `images/Section2/text-divider.png`
+        sect2_copy_img.src = `../images/Section2/text-divider.png`
+        sect3_1_copy_img.src = `../images/Section2/text-divider.png`
+        sect3_2_copy_img.src = `../images/Section2/text-divider.png`
+        sect4_copy_img.src = `../images/Section2/text-divider.png`
     }
 
 
