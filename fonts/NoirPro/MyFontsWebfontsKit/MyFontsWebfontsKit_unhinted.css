@@ -1,0 +1,58 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3742687, 2019-04-03T10:48:53-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: NoirPro-Bold by Mindburger Studio
+ * URL: https://www.myfonts.com/fonts/mindburger-studio/noir/pro-bold/
+ * 
+ * Webfont: NoirPro-Heavy by Mindburger Studio
+ * URL: https://www.myfonts.com/fonts/mindburger-studio/noir/pro-heavy/
+ * 
+ * Webfont: NoirPro-Light by Mindburger Studio
+ * URL: https://www.myfonts.com/fonts/mindburger-studio/noir/pro-light/
+ * 
+ * Webfont: NoirPro-Medium by Mindburger Studio
+ * URL: https://www.myfonts.com/fonts/mindburger-studio/noir/pro-medium/
+ * 
+ * Webfont: NoirPro-Regular by Mindburger Studio
+ * URL: https://www.myfonts.com/fonts/mindburger-studio/noir/pro-regular/
+ * 
+ * Webfont: NoirPro-SemiBold by Mindburger Studio
+ * URL: https://www.myfonts.com/fonts/mindburger-studio/noir/pro-semi-bold/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3742687
+ * Licensed pageviews: 100,000
+ * Webfonts copyright: Copyright (c) Milos Mitrovic, 2016. All rights reserved.
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/391bdf");
+
+  
+@font-face {font-family: 'NoirPro-Bold';src:url('webfonts/391BDF_0_unhinted_0.woff2') format('woff2'),url('webfonts/391BDF_0_unhinted_0.woff') format('woff'),url('webfonts/391BDF_0_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NoirPro-Heavy';src:url('webfonts/391BDF_1_unhinted_0.woff2') format('woff2'),url('webfonts/391BDF_1_unhinted_0.woff') format('woff'),url('webfonts/391BDF_1_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NoirPro-Light';src:url('webfonts/391BDF_2_unhinted_0.woff2') format('woff2'),url('webfonts/391BDF_2_unhinted_0.woff') format('woff'),url('webfonts/391BDF_2_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NoirPro-Medium';src:url('webfonts/391BDF_3_unhinted_0.woff2') format('woff2'),url('webfonts/391BDF_3_unhinted_0.woff') format('woff'),url('webfonts/391BDF_3_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NoirPro-Regular';src:url('webfonts/391BDF_4_unhinted_0.woff2') format('woff2'),url('webfonts/391BDF_4_unhinted_0.woff') format('woff'),url('webfonts/391BDF_4_unhinted_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NoirPro-SemiBold';src:url('webfonts/391BDF_5_unhinted_0.woff2') format('woff2'),url('webfonts/391BDF_5_unhinted_0.woff') format('woff'),url('webfonts/391BDF_5_unhinted_0.ttf') format('truetype');}
+ 
