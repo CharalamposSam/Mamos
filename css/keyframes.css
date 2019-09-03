@@ -257,7 +257,7 @@
       background-position-Y: 0;
     }
     to {
-      background-position-Y: -10800px;
+      background-position-Y: -5400px;
     }
   }
   @keyframes moveY-section3 {
@@ -265,7 +265,7 @@
       background-position-Y: 0;
     }
     to {
-      background-position-Y: -10800px;
+      background-position-Y: -5400px;
     }
   }
   /* Section3 Finish */
@@ -275,7 +275,7 @@
       background-position-Y: 0;
     }
     to {
-      background-position-Y: -9600px;
+      background-position-Y: -4800px;
     }
   }
   @keyframes moveY-section4 {
@@ -283,7 +283,7 @@
       background-position-Y: 0;
     }
     to {
-      background-position-Y: -9600px;
+      background-position-Y: -4800px;
     }
   }
   @-webkit-keyframes machine {

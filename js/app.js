@@ -524,8 +524,6 @@ window.addEventListener( 'resize', initialize_Upadate )
 window.addEventListener( 'load', initialize_Upadate )
 
 function initialize_Upadate() {
-    console.log( 'afbqe' )
-
     // Fix sections on resize
     if ( window.innerWidth > 600 && !isMobile ) {
         if ( currentSection == 1 ) {
@@ -585,9 +583,6 @@ function initialize_Upadate() {
         sect3_cont1_copy_img.src = `../images/Section1/text-divider.png`
         sect3_cont2_copy_img.src = `../images/Section1/text-divider.png`
         sect4_copy_img.src = `../images/Section1/text-divider.png`
-
-        pngSprite_likiskos.style.transform = `scale( ${ petrosSecret.clientWidth / 2500 } )`
-        pngSprite_lamp.style.transform = `scale( ${ machineImg.clientWidth / 1900 } )`
         
         Sec3_cont1_changeImage = false
         sect4_cont2_floor.src = `../images/Section6/floor.png`
@@ -707,3 +702,13 @@ function initialize_Upadate() {
         sect3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret.png`
     }
 }
+
+window.addEventListener( 'load', () => {
+    pngSprite_likiskos.style.transform = `scale( ${ petrosSecret.clientWidth / 1250 } )`
+    pngSprite_lamp.style.transform = `scale( ${ machineImg.clientWidth / 950 } )`
+} )
+
+window.addEventListener( 'resize', () => {
+    pngSprite_likiskos.style.transform = `scale( ${ petrosSecret.clientWidth / 1250 } )`
+    pngSprite_lamp.style.transform = `scale( ${ machineImg.clientWidth / 950 } )`
+} )

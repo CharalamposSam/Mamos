@@ -19,37 +19,6 @@ body {
     
 }
 
-header {
-    width: 100%;
-    height: 80px;
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 30;
-    display: none;
-
-    img {
-        width: 100%;
-        max-width: 70px;
-        display: block;
-        margin-right: auto;
-    }
-
-    nav {
-        width: 800px;
-        height: 50px;
-        background-color: #2a809b;
-    }
-
-    button {
-        width: 150px;
-        height: 40px;
-        margin-left: auto;
-    }
-}
-
 .bodyBG {
     background: url( '../images/body/beige-gradient.jpg');
     background-size: auto 100%;
@@ -537,11 +506,11 @@ section {
         }
 
             .png-animation {
-                background-image : url( ../images/Section3/png-anim.png );
+                background-image : url( ../images/Section3/png-anim2.png );
                 background-repeat: no-repeat;
                 z-index: 21;
                 width: 290px;
-                height: 270px;
+                height: 135px;
                 animation: moveY-section3 1s steps( 36 ) infinite;
                 background-position: center;
                 transform: scale( .35 );
@@ -579,11 +548,11 @@ section {
                 }
           
                   .png-animation {
-                      background-image : url( ../images/Section4/png-anim-sec4.png);
+                      background-image : url( ../images/Section4/png-anim-sec4_v2.png);
                       background-repeat: no-repeat;
                       z-index: 21;
                       width: 359px;
-                      height: 362px;
+                      height: 175px;
                       animation: moveY-section4 1s steps( 24 ) infinite;
                       background-position: center;
                       transform: scale( .9 );
@@ -874,7 +843,7 @@ section {
             background: #21637a;
             border: 2px solid #b6a488;
             box-shadow: 0 5px 5px 0 rgba(44, 42, 37, .2);
-            width: 160px;
+            width: 170px;
             height: 50px;
             font-size: 14px;
             font-family: Burford;

@@ -18,43 +18,6 @@ body {
   }
 }
 
-header {
-  width: 100%;
-  height: 80px;
-  padding: 10px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: fixed;
-  z-index: 30;
-  display: none;
-}
-
-header img {
-  width: 100%;
-  max-width: 70px;
-  display: block;
-  margin-right: auto;
-}
-
-header nav {
-  width: 800px;
-  height: 50px;
-  background-color: #2a809b;
-}
-
-header button {
-  width: 150px;
-  height: 40px;
-  margin-left: auto;
-}
-
 .bodyBG {
   background: url("../images/body/beige-gradient.jpg");
   background-size: auto 100%;
@@ -584,11 +547,11 @@ section {
 }
 
 .section3 .cont1 .png-animation {
-  background-image: url(../images/Section3/png-anim.png);
+  background-image: url(../images/Section3/png-anim2.png);
   background-repeat: no-repeat;
   z-index: 21;
   width: 290px;
-  height: 270px;
+  height: 135px;
   -webkit-animation: moveY-section3 1s steps(36) infinite;
           animation: moveY-section3 1s steps(36) infinite;
   background-position: center;
@@ -639,11 +602,11 @@ section {
 }
 
 .section3 .cont2 .machine .png-animation {
-  background-image: url(../images/Section4/png-anim-sec4.png);
+  background-image: url(../images/Section4/png-anim-sec4_v2.png);
   background-repeat: no-repeat;
   z-index: 21;
   width: 359px;
-  height: 362px;
+  height: 175px;
   -webkit-animation: moveY-section4 1s steps(24) infinite;
           animation: moveY-section4 1s steps(24) infinite;
   background-position: center;
@@ -985,7 +948,7 @@ section {
   border: 2px solid #b6a488;
   -webkit-box-shadow: 0 5px 5px 0 rgba(44, 42, 37, 0.2);
           box-shadow: 0 5px 5px 0 rgba(44, 42, 37, 0.2);
-  width: 160px;
+  width: 170px;
   height: 50px;
   font-size: 14px;
   font-family: Burford;
