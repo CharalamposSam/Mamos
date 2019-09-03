@@ -222,7 +222,7 @@ window.addEventListener( 'load', () => {
             margin: 0;
             padding-top: 30px;
             width: 100%;
-            background: url( 'images/Section1/mamos-label-blue-darker1.jpg' );
+            url( 'images/Section1/mamos-label-blue-darker1.jpg' );
             height: 45%;
         `
 
