@@ -10,7 +10,6 @@ html {
 body {
   margin: 0;
   overflow: hidden;
-  background: url(../images/body/mamos-texture-beige.jpg);
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,6 +53,16 @@ header button {
   width: 150px;
   height: 40px;
   margin-left: auto;
+}
+
+.bodyBG {
+  background: url("../images/body/beige-gradient.jpg");
+  background-size: auto 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 section {
@@ -556,11 +565,11 @@ section {
 }
 
 .section3 .cont1 .png-sprite {
-  width: 35vw;
+  width: 50vw;
   height: 0;
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 32%;
   background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1060,7 +1069,7 @@ section {
     transition: 0s ease-in-out;
   }
   .section4 .cont2 .floor {
-    width: 600%;
+    width: 140%;
   }
   .section4 .cont2 .mamos-beer {
     bottom: 24%;
@@ -1090,20 +1099,20 @@ section {
     width: 15%;
   }
   .section4 .cont2 .likiskos2 {
-    bottom: 24%;
+    bottom: 23%;
     -webkit-animation: none !important;
             animation: none !important;
     width: 17%;
-    left: 55%;
+    left: 53%;
   }
   .section4 .cont2 .likiskos4 {
-    bottom: 23%;
+    bottom: 22%;
     -webkit-animation: none !important;
             animation: none !important;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     width: 17%;
-    left: 63%;
+    left: 62%;
   }
   .section4 .cont2 .bg {
     width: 150%;
