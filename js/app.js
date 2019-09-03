@@ -101,15 +101,15 @@ let Sec3_cont1_changeImage = true, scaleCopy, direction = 1, currentSection = 1,
 
 
 window.addEventListener( 'load', () => {
-    sect4_cont2_floor.src = `../images/Section6/mobile-floor.jpg`
+    sect4_cont2_floor.src = `images/Section6/mobile-floor.jpg`
     sect3_copy.style.transform = `translate(-50%, 0) scale(0.6)`
-    sect2_copy_img.src = `../images/Section2/text-divider.png`
-    sect3_cont1_copy_img.src = `../images/Section2/text-divider.png`
-    sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
-    sect4_copy_img.src = `../images/Section2/text-divider.png`
+    sect2_copy_img.src = `images/Section2/text-divider.png`
+    sect3_cont1_copy_img.src = `images/Section2/text-divider.png`
+    sect3_cont2_copy_img.src = `images/Section2/text-divider.png`
+    sect4_copy_img.src = `images/Section2/text-divider.png`
 
     if ( isMobile && window.innerWidth < mobileBreakPoint ) {
-        sect3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
+        sect3_cont1_petrosSecret_img.src = `images/Section3/Petros-secret-likiskos.png`
         Sect3_cont1_changeImage = true
         section4.style.height = '200vh'
         section4_cont1.style.height = '50%'
@@ -222,7 +222,7 @@ window.addEventListener( 'load', () => {
             margin: 0;
             padding-top: 30px;
             width: 100%;
-            background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
+            background: url( 'images/Section1/mamos-label-blue-darker1.jpg' );
             height: 45%;
         `
 
@@ -248,7 +248,7 @@ window.addEventListener( 'load', () => {
             height: 100vh;
         `
         sect3_cont1_petrosSecret.style.cssText = `width: 100%;`
-        sect3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
+        sect3_cont1_petrosSecret_img.src = `images/Section3/Petros-secret-likiskos.png`
 
         sect3_cont2.style.cssText = `
             height: 100vh;
@@ -265,7 +265,7 @@ window.addEventListener( 'load', () => {
             transform: translateX( 0 );
             grid-row: 1 / 2;
             width: 100%;
-            background: url( '../images/Section1/mamos-label-blue-darker1.jpg' );
+            background: url( 'images/Section1/mamos-label-blue-darker1.jpg' );
             margin-top: 0;
         `
 
