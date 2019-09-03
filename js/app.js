@@ -84,20 +84,19 @@ const sections = document.querySelectorAll( 'section' ),
       mamosbeer = document.querySelector( '.section4 .cont2 .mamos-beer' ),
       mamosBG = document.querySelector( '.section4 .cont2 .bg' ),
       sect4_copy_img = document.querySelector( '.section4 .copy img' ),
-      sect4_cont1_clouds = document.querySelector( '.section4 .cont1 .clouds' )
-     
-
-      // Section2 png sprite resize
-    const petrosSecret = document.querySelector( '.section3 .cont1 .petros-secret img' ),
-    pngSprite_likiskos = document.querySelector( '.section3 .cont1 .petros-secret .png-animation' ),
-    machineImg = document.querySelector( '.section3 .cont2 .machine img' ),
-    pngSprite_lamp = document.querySelector( '.section3 .cont2 .machine .png-animation' )
-
-    const sect3_btn_watchMovie = document.querySelector( '.section1 .container .copy button' ),
-       sect3_windowPlayer = document.querySelector( '.section1 .videoWindow' ),
-       sect3_closeWindowPlayer = document.querySelector( '.section1 .videoWindow .closeBtn' )
-
-   
+      sect4_cont1_clouds = document.querySelector( '.section4 .cont1 .clouds' ),
+      petrosSecret = document.querySelector( '.section3 .cont1 .petros-secret img' ),
+      pngSprite_likiskos = document.querySelector( '.section3 .cont1 .petros-secret .png-animation' ),
+      machineImg = document.querySelector( '.section3 .cont2 .machine img' ),
+      pngSprite_lamp = document.querySelector( '.section3 .cont2 .machine .png-animation' ),
+      sect3_btn_watchMovie = document.querySelector( '.section1 .container .copy button' ),
+      sect3_windowPlayer = document.querySelector( '.section1 .videoWindow' ),
+      sect3_closeWindowPlayer = document.querySelector( '.section1 .videoWindow .closeBtn' ),
+      section3_chlidren = document.querySelectorAll( '.section3 .container' ),
+      footer = document.querySelector( 'footer' ),
+      numberOfSections = sections.length
+let Sec3_cont1_changeImage = true, scaleCopy, direction = 1, currentSection = 1,
+    breakPoint = 600, mobileBreakPoint = 600
 
 
 
@@ -109,7 +108,7 @@ window.addEventListener( 'load', () => {
     sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
     sect4_copy_img.src = `../images/Section2/text-divider.png`
 
-    if ( isMobile && window.innerWidth < 600 ) {
+    if ( isMobile && window.innerWidth < mobileBreakPoint ) {
         sect3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
         Sect3_cont1_changeImage = true
         section4.style.height = '200vh'
@@ -119,7 +118,7 @@ window.addEventListener( 'load', () => {
         section4_cont2.style.transform = `translateY( 0 )`
     } 
 
-    if ( isMobile && window.innerWidth > 600 ) {
+    if ( isMobile && window.innerWidth > mobileBreakPoint ) {
         section4.style.height = '200vh'
         section4_cont1.style.height = '50%'
         section4_cont2.style.height = '50%'
@@ -393,21 +392,9 @@ function throttle( func, limit ) {
 
 
 
-//Set variables
-const footer = document.querySelector( 'footer' ),
-      numberOfSections = sections.length
-
-let direction = 1, currentSection = 1
 
 // Fix double section if the user refresh in a random position
-if ( currentSection > 3 && window.innerWidth > 600 && !isMobile ) sections[ 2 ].style.transform = 'translateX( -50% )'
-
-// Fix section 4 if user refresh in the next one section
-if ( currentSection > 4 ) {
-    sections[ 2 ].style.transform = 'translateX( -50% )'
-    machine.style.animation = `machine 0s ease-in-out 0s forwards`
-    copy.style.animation = `copy-sect4 0s ease-in-out 0s forwards`
-}
+if ( currentSection > 3 && window.innerWidth > breakPoint && !isMobile ) sections[ 2 ].style.transform = 'translateX( -50% )'
 
 // Wheel event
 document.addEventListener( 'wheel', throttle( scrollChange, 1500 ) )
@@ -436,11 +423,11 @@ function smoothScroll( duration ) {
     let startTime = null
     
     // Double section ( 3 & 4 ) to the right or to the or keep scrolling
-    if ( currentSection == 4 && direction == 1 && window.innerWidth > 600 ) {
+    if ( currentSection == 4 && direction == 1 && window.innerWidth > breakPoint ) {
         sections[ 2 ].style.transform = 'translateX( -50% )'
-        machine.style.animation = `machine 1.5s ease-in-out .5s forwards`
+        machine.style.animation = `machine 2.5s ease-in-out .5s forwards`
         copy.style.animation = `copy-sect4 1s ease-in-out .9s forwards`
-    } else if ( currentSection == 3 && direction == -1 && window.innerWidth > 600 ) {
+    } else if ( currentSection == 3 && direction == -1 && window.innerWidth > breakPoint ) {
         copy.style.animation = `copy-sect4Reverse 1s ease-in-out forwards`
         machine.style.animation = `machineReverse 1.5s ease-in-out forwards`
         setTimeout( () => {
@@ -449,7 +436,7 @@ function smoothScroll( duration ) {
         
     } else {
         // Double section (4 & 5 ) up and down
-        if ( currentSection == 6 && direction == 1 && window.innerWidth > 600 ) {
+        if ( currentSection == 6 && direction == 1 && window.innerWidth > breakPoint ) {
             section4_cont1.style.transform = `translateY( 100% )`
             section4_cont2.style.transform = `translateY( -100% )`
             
@@ -460,7 +447,7 @@ function smoothScroll( duration ) {
             likiskos4.style.animation ='likiskos3 1.5s ease-in-out .6s forwards'
             buttonSec5.style.animation ='button-sec6 .7s ease-in-out 2s forwards'
 
-        } else if ( currentSection == 5 && direction == -1 && window.innerWidth > 600) {
+        } else if ( currentSection == 5 && direction == -1 && window.innerWidth > breakPoint) {
             section4_cont1.style.transform = `translateY( 0 )`
             section4_cont2.style.transform = `translateY( 0 )`
         } else {
@@ -468,9 +455,9 @@ function smoothScroll( duration ) {
 
             if ( currentSection == 2 ) {
                 setTimeout( () => {
-                    monaxo.style.animation = `monaxo 1s ease-in-out forwards`
-                    train.style.animation = `train 1s ease-in-out forwards`
-                    petros.style.animation = `petros 1s ease-in-out .3s forwards`
+                    monaxo.style.animation = `monaxo 1s ease-out forwards`
+                    train.style.animation = `train 1s ease-out forwards`
+                    petros.style.animation = `petros 1.6s ease-out .2s forwards`
                 }, 600 )
             } else if ( currentSection == 5 ) {
                 setTimeout( () => {
@@ -504,13 +491,7 @@ function smoothScroll( duration ) {
       
 
 
-const section3_chlidren = document.querySelectorAll( '.section3 .container' )
 
-
-
-let Sec3_cont1_changeImage = true
-
-let scaleCopy
 
  // Section1 open window player
 sect3_btn_watchMovie.addEventListener( 'click', () => {
@@ -525,7 +506,7 @@ window.addEventListener( 'load', initialize_Upadate )
 
 function initialize_Upadate() {
     // Fix sections on resize
-    if ( window.innerWidth > 600 && !isMobile ) {
+    if ( window.innerWidth > breakPoint && !isMobile ) {
         if ( currentSection == 1 ) {
             window.scrollTo( 0, 0 )
         } else if ( currentSection == 2 ) {
@@ -586,7 +567,7 @@ function initialize_Upadate() {
         
         Sec3_cont1_changeImage = false
         sect4_cont2_floor.src = `../images/Section6/floor.png`
-    } else if ( window.innerWidth < 600 && !isMobile ) {
+    } else if ( window.innerWidth < breakPoint && !isMobile ) {
         // Fix scrolling position on resize
         if ( currentSection == 1 ) {
             window.scrollTo( 0, 0 )
@@ -639,7 +620,7 @@ function initialize_Upadate() {
     }
 
     
-    if ( window.innerHeight < 600 && window.innerWidth > 600 && !isMobile ) {
+    if ( window.innerHeight < 600 && window.innerWidth > breakPoint && !isMobile ) {
         sect3_bottle.style.maxWidth = `130px`
         sect1_shipsL.style.width = `17%`
         sect1_shipsR.style.width = `17%`
@@ -657,7 +638,7 @@ function initialize_Upadate() {
         //sect4_cont1_handKey.style.width = ``
         sect4_cont2_mamosBeer.style.width = `8%`
         sect4_cont2_mamosGlass.style.width = `20%`
-    } else if ( window.innerHeight < 750 && window.innerWidth > 600 && !isMobile ) {
+    } else if ( window.innerHeight < 750 && window.innerWidth > breakPoint && !isMobile ) {
         sect3_bottle.style.maxWidth = `150px`
         sect3_bottle.style.maxHeight = `430px`
 
@@ -676,7 +657,7 @@ function initialize_Upadate() {
         sect4_cont2_mamosGlass.style.width = `23%`
         likiskos1.style.left = `33%`
         likiskos3.style.left = `29%`
-    } else if ( window.innerHeight > 750 && window.innerWidth > 600 && !isMobile ) {
+    } else if ( window.innerHeight > 750 && window.innerWidth > breakPoint && !isMobile ) {
         sect3_bottle.style.maxWidth = ``
         sect3_bottle.style.maxHeight = ``
 
