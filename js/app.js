@@ -560,13 +560,13 @@ function initialize_Upadate() {
         scaleCopy = Math.max( .8, ( window.innerWidth / 1700 ) )
         sect3_copy.style.transform = `scale( ${scaleCopy} )`
         
-        sect2_copy_img.src = `../images/Section1/text-divider.png`
-        sect3_cont1_copy_img.src = `../images/Section1/text-divider.png`
-        sect3_cont2_copy_img.src = `../images/Section1/text-divider.png`
-        sect4_copy_img.src = `../images/Section1/text-divider.png`
+        sect2_copy_img.src = `images/Section1/text-divider.png`
+        sect3_cont1_copy_img.src = `images/Section1/text-divider.png`
+        sect3_cont2_copy_img.src = `images/Section1/text-divider.png`
+        sect4_copy_img.src = `images/Section1/text-divider.png`
         
         Sec3_cont1_changeImage = false
-        sect4_cont2_floor.src = `../images/Section6/floor.png`
+        sect4_cont2_floor.src = `images/Section6/floor.png`
     } else if ( window.innerWidth < breakPoint && !isMobile ) {
         // Fix scrolling position on resize
         if ( currentSection == 1 ) {
@@ -603,10 +603,10 @@ function initialize_Upadate() {
         sect4_cont1_petrosFactory.style.width = `56%`
 
         sect3_copy.style.transform = `translate( -50%, 0 ) scale( 0.6 )`
-        sect2_copy_img.src = `../images/Section2/text-divider.png`
-        sect3_cont1_copy_img.src = `../images/Section2/text-divider.png`
-        sect3_cont2_copy_img.src = `../images/Section2/text-divider.png`
-        sect4_copy_img.src = `../images/Section2/text-divider.png`
+        sect2_copy_img.src = `images/Section2/text-divider.png`
+        sect3_cont1_copy_img.src = `images/Section2/text-divider.png`
+        sect3_cont2_copy_img.src = `images/Section2/text-divider.png`
+        sect4_copy_img.src = `images/Section2/text-divider.png`
 
         section4.style.height = `200vh`
         section4_cont1.style.height = `50%`
@@ -616,7 +616,7 @@ function initialize_Upadate() {
 
         Sec3_cont1_changeImage = true
 
-        sect4_cont2_floor.src = `../images/Section6/mobile-floor.jpg`
+        sect4_cont2_floor.src = `images/Section6/mobile-floor.jpg`
     }
 
     
@@ -678,9 +678,9 @@ function initialize_Upadate() {
         likiskos3.style.left = `27%`
     }
     if ( Sec3_cont1_changeImage ) {
-        sect3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret-likiskos.png`
+        sect3_cont1_petrosSecret_img.src = `images/Section3/Petros-secret-likiskos.png`
     } else {
-        sect3_cont1_petrosSecret_img.src = `../images/Section3/Petros-secret.png`
+        sect3_cont1_petrosSecret_img.src = `images/Section3/Petros-secret.png`
     }
 }
 
